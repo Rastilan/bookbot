@@ -18,3 +18,13 @@ def count_chars(contents):
     return chars
 
 
+def sort_chars(input):
+    sorted_list = [];
+    input = dict(sorted(input.items(), reverse=True, key=lambda key: key[1]))
+    for key, value in input.items():
+        if key== " ":
+            pass
+        else:
+            sorted_list.append({"char": key, "num": value})
+            
+    return sorted_list
